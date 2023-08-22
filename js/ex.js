@@ -43,7 +43,7 @@ buttonImportance.addEventListener("click", () => {
 });
 
 function updateList(taskList = tasks) {
-    const listElement = document.querySelector("#taskList");
+    const listElement = document.querySelector("#listaTarefa");
     listElement.innerHTML = '';
 
     taskList.forEach(task => {
@@ -52,7 +52,7 @@ function updateList(taskList = tasks) {
         if (task.value) listItem.textContent += ` - ${task.value}`;
         if (task.duration) listItem.textContent += ` - ${task.duration}`;
 
-        const deleteButton = document.createElement("button");
+        let deleteButton = document.createElement("button");
         deleteButton.textContent = " X ";
         listItem.appendChild(deleteButton);
 
@@ -61,7 +61,7 @@ function updateList(taskList = tasks) {
         deleteButton.addEventListener("click", (evt) => {
             evt.preventDefault();
 
-            const index = tasks.indexOf(task);
+            let index = tasks.indexOf(task);
 
             if (index !== -1) {
                 tasks.splice(index, 1);
