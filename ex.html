@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lista de Tarefas</title>
+    <script src="./js/ex.js"></script>
+</head>
+<body>
+    <h1>Minha Lista de Tarefas</h1>
+    <form id="form">
+        <label for="description">Descrição:</label>
+        <input type="text" id="description" required>
+        
+        <label for="author">Autor:</label>
+        <input type="text" id="author" required>
+        
+        <label for="department">Departamento:</label>
+        <input type="text" id="department" required>
+        
+        <label for="importance">Importância:</label>
+        <input type="radio" name="importance" value="Alta"  id="high" required> Alta
+        <input type="radio" name="importance" value="Média" id="medium"> Média
+        <input type="radio" name="importance" value="Baixa" id="low"> Baixa
+        
+        <label for="value">Valor:</label>
+        <input type="number" id="value">
+        
+        <label for="duration">Duração:</label>
+        <input type="number" id="duration">
+        
+        <button type="submit" id="addButton">Adicionar Tarefa</button>
+    </form>
+    
+    <button id="buttonImportance">Listar por Importância</button>
+    
+    <ul id="taskList">
+    
+    </ul>
+
+</body>
+</html>
