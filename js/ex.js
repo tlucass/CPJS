@@ -32,8 +32,10 @@ function updateList(taskList = tasks) {
             //Encontra o índice da tarefa no array tasks
             let index = tasks.indexOf(task);
 
+            //Verifica se a tarefa que está sendo excluída realmente existe no array tasks. Se a tarefa não existir (ou seja, index for -1), a exclusão não é realizada, evitando erros.
             if (index !== -1) {
-                tasks.splice(index, 1);
+                //Se a condição anterior for verdadeira, utiliza o método splice() para remover a tarefa do array tasks. 
+                tasks.splice(index, 1); //O primeiro argumento, index, é o índice da tarefa que desejamos remover no array. O segundo argumento, 1, especifica quantos elementos devem ser removidos a partir do índice especificado. 
             }
 
             evt.target.parentNode.remove();
